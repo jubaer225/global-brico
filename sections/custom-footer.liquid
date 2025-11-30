@@ -4,6 +4,24 @@
     <div class="container">
         <div class="footer_items">
 
+            {% for block in section.blocks %}
+
+                {% case block.type %}
+
+                    {% when 'ftr_logo' %}
+                        <h1>Left Part Here</h1>
+
+                    {% when 'ftr_menu' %}
+                        <div class="ftr_menu_wrapper">
+                            {% assign menu = block.settings.menu_id %}
+                            
+
+                        </div>
+
+                {% endcase %}
+
+            {% endfor %}
+
         </div>
     </div>
 </div>
